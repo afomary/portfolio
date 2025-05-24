@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Create a new Event{% endblock %}
+{% block content %}
+
+<h1>Create a New Event:</h1>
+<form action="{{url_for('add_event')}}" method="POST" name="add_event">
+    <label for="name">Event Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="venue">Venue:</label><br>
+    <input type="text" id="venue" name="venue" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="date">Date:</label><br>
+    <input type="text" id="date" name="date" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="starttime">Start Time:</label><br>
+    <input type="text" id="starttime" name="starttime" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="endtime">End Time:</label><br>
+    <input type="text" id="endtime" name="endtime" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="attendees">Max Attendees:</label><br>
+    <input type="text" id="attendees" name="attendees" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="invitation">Invitations:</label><br>
+    <input type="text" id="invitation" name="invitation" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="planner">PartyTime Planner:</label><br>
+    <input type="text" id="planner" name="planner" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="items">Rental Items:</label><br>
+    <input type="text" id="items" name="items" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="image">Image Path:</label><br>
+    <input type="text" id="image" name="image" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="notes">Notes:</label><br>
+    <input type="text" id="notes" name="notes" required minlength="4" maxlength="20" size="10"><br>
+
+    <br>
+    <button class="btn btn-primary" type="submit"value="submit">SUBMIT</button>&nbsp;<button class="btn btn-secondary" type="reset" value="reset">RESET</button>
+
+</form>
+
+{% endblock %}

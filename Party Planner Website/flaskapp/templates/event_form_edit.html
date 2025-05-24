@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Edit Event{% endblock %}
+{% block content %}
+
+<h1>Edit Event: {{event_id}} </h1>
+<form action="{{url_for('edit_event')}}" name="edit_event">
+    <label for="name">Event Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="venue">Venue:</label><br>
+    <input type="text" id="venue" name="venue" required minlength="4" maxlength="20" size="10"><select><option type="multiple">{{venues}}</option></select><br>
+
+    <label for="date">Date:</label><br>
+    <input type="text" id="date" name="date" required minlength="4" maxlength="20" size="10"><select><option type="multiple">{{events['date']}}</option></select><br>
+
+    <label for="starttime">Start Time:</label><br>
+    <input type="text" id="starttime" name="starttime" required minlength="4" maxlength="20" size="10"><select><option type="multiple">{{events['starttime']}}</option></select><br>
+
+    <label for="endtime">End Time:</label><br>
+    <input type="text" id="endtime" name="endtime" required minlength="4" maxlength="20" size="10"><select><option type="multiple">{{events['endtime']}}</option></select><br>
+
+    <label for="attendees">Max Attendees:</label><br>
+    <input type="text" id="attendees" name="attendees" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="invitation">Invitations:</label><br>
+    <input type="text" id="invitation" name="invitation" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="host">Event Host:</label><br>
+    <input type="text" id="host" name="host" required minlength="4" maxlength="20" size="10"><select><option type="multiple">{{people}}</option></select><br>
+
+    <label for="planner">PartyTime Planner:</label><br>
+    <input type="text" id="planner" name="planner" required minlength="4" maxlength="20" size="10"><option type="multiple">{{people}}</option><br>
+
+    <label for="items">Rental Items:</label><br>
+    <input type="text" id="items" name="items" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="image">Image Path:</label><br>
+    <input type="text" id="image" name="image" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="notes">Notes:</label><br>
+    <input type="text" id="notes" name="notes" required minlength="4" maxlength="20" size="10"><br>
+
+    <br>
+    <button class="btn btn-primary" type="submit"value="submit">SUBMIT</button>&nbsp;<button class="btn btn-secondary" type="reset" value="reset">RESET</button>
+
+</form>
+
+{% endblock %}

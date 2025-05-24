@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}PartyTime Events {% endblock %}
+{% block content %}
+
+<h1>PartyTime Events </h1>
+<div class="container">
+    <div class="row">
+    <div class="col">
+        <a href="Berry Sweet Berry Bash"><div class="card h-90" style="width: 18rem;">
+            <img class="card-img-top my-3" src="{{ url_for('static', filename='images/strawberry.jpg')}}" alt="Strawberry Shortcake">
+            <div class="card-body">
+                <h5> Berry Sweet Berry Bash ! </h5>
+                <p class="card-text">October 25th at 7:00 PM</p>
+            </div>
+        </div></a>
+    
+    <div class="col">
+        <a href="Wicked Cool Whip Dinner"><div class="card" style="width: 18rem;">
+            <img class="card-img-top my-3" src="{{ url_for('static', filename='images/stewie.jpg')}}" alt="Stewie Griffin">
+            <div class="card-body">
+                <h5> Wicked Cool Whip Dinner ! </h5>
+                <p class="card-text">October 30th at 10:00 PM</p>
+            </div>
+        </div></a>
+    </div>
+    </div>
+    <div class="col">
+        <a href="Halloween Pastry Party"><div class="card" style="width: 18rem;">
+            <img class="card-img-top my-3" src="{{ url_for('static', filename='images/hellokitty.jpg')}}" alt="Hello Kitty">
+            <div class="card-body">
+                <h6> Supercute Halloween Pastry Party ! </h6>
+                <p class="card-text">October 31st at 8:00 PM</p>
+            </div>
+        </div></a>
+    
+    <div class="col">
+        <a href="All Night Rager"><div class="card" style="width: 18rem;">
+            <img class="card-img-top my-3" src="{{ url_for('static', filename='images/muscleman.jpg')}}" alt="Muscle Man">
+            <div class="card-body">
+                <h5> All-Night Rager ! </h5>
+                <p class="card-text">November 4th at 11:00 PM</p>
+            </div>
+        </div></a>
+    </div>
+    </div>
+
+    <div class="col">
+        <a href="Y2K Juicy Couture Launch"><div class="card" style="width: 18rem;">
+            <img class="card-img-top my-3" src="{{ url_for('static', filename='images/parishilton.jpg')}}" alt="Paris Hilton">
+            <div class="card-body">
+                <h6> Y2K Juicy Couture Launch ! </h6>
+                <p class="card-text">November 7th at 11:30 PM</p>
+            </div>
+        </div></a>
+
+    <div class="col">
+        <a href="Gnarly Marathon Surf-Off"><div class="card" style="width: 18rem;">
+            <img class="card-img-top my-3" src="{{ url_for('static', filename='images/broseph.jpg')}}" alt="Broseph">
+            <div class="card-body">
+                <h5> Gnarly Marathon Surf-Off ! </h5>
+                <p class="card-text">November 11th at 6:00 PM</p>
+            </div>
+        </div></a>
+    </div>
+    </div>
+    <br>
+    <center><a href="{{url_for('add_event')}}"><button class="btn btn-primary"> Add an Event </button></a></center>
+    <br>
+
+</div>
+{% endblock %}

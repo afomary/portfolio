@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Delete an Event{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div>
+        <br></br>
+        <h1 style="background-color:crimson">Delete Event: </h1>
+        <br></br>
+        action="{{url_for('add_people')}}" method="POST" name="add_people"
+        <div class="col"></div>
+        
+        <center><a href="{{url_for('get_events')}}"><button class="btn btn-primary"> Back to Events </button></a>&nbsp;<a href="{{url_for('get_events')}}" action="{{url_for('delete_event')}}" method="POST" name="delete_event"><button class="btn btn-primary"> Confirm Delete</button></a></center>
+        <br>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer> I211 Project Site Fall 2023 </footer>
+{% endblock %}

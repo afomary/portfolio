@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Create a new Person{% endblock %}
+{% block content %}
+
+<h1>Add a New Person:</h1>
+<form action="{{url_for('add_people')}}" method="POST" name="add_people">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="address">Address:</label><br>
+    <input type="text" id="address" name="address" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="birthday">Birthday:</label><br>
+    <input type="text" id="birthday" name="birthday" required minlength="4" maxlength="20" size="10"><br>
+
+    <label for="phone">Phone:</label><br>
+    <input type="text" id="phone" name="phone" required minlength="4" maxlength="20" size="10"><br>
+
+    <br>
+
+    <button class="btn btn-primary" type="submit"value="submit">SUBMIT</button>&nbsp;<button class="btn btn-secondary" type="reset" value="reset">RESET</button>
+
+</form>
+
+{% endblock %}

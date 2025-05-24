@@ -1,0 +1,42 @@
+<h1 class="mt-5">Create a new Venue</h1>
+
+<form action="{{url_for('venue_form')}}" method="post" name="venue-form">
+
+<!-- name,address, phone, fees, attendees -->
+
+  <fieldset class="mt-3 w-75">
+    
+    Name:
+
+  </fieldset>
+
+  <fieldset class="mt-3">
+
+    Address:
+    
+  </fieldset>
+  
+  <fieldset class="mt-3">
+    
+    Phone:
+    
+  </fieldset>
+  
+  <fieldset class="my-3 w-75">
+        
+        Fees:
+
+  </fieldset>
+
+   <fieldset class="my-3 w-75">
+        
+        Attendees:
+
+  </fieldset>
+
+ 
+  <button class="btn btn-primary" type="submit" value="submit">SUBMIT</button>
+  <button class="btn btn-secondary" type="reset" value="reset">RESET</button>
+</form>
+
+FooterIndiana University

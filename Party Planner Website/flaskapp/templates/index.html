@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1 class="display-4"><center> PartyTime Events ! </center></h1>
+
+<main>
+    <div class="container">
+        <p class="lead"><center> Welcome to PartyTime ! Party Hard, Party Safe, you can count on us to make the date ! </center></p>
+        <center><img src="{{ url_for('static', filename='images/adventuretime.jpg')}}" alt="adventuretime"></center>
+    </div>
+    <div>
+        <br>
+        <center>
+        <a href="{{url_for('get_events')}}"><button class="btn btn-primary" type="See Events" value="See Events"> See Events </button></a>
+        <a href="{{url_for('get_venues')}}"><button class="btn btn-primary" type="See Venues" value="See Venues"> See Venues </button></a>
+        <a href="{{url_for('get_people')}}"><button class="btn btn-primary" type="See People" value="See People"> See People </button></a>
+        </center>
+        </br>
+    </div>
+</main>
+
+<p></p>
+<footer> I211 Project Site Fall 2023 </footer>
+{% endblock %}
